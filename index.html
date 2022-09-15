@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,115 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola mundo</h1>
+    <!--dnetro del header se va a colocar el logo, titulo y menu de navegación-->
+    <header style="background-color:rgb(104, 204, 204)">
+        <center>
+            <a href="https://sigma.ica.gov.co/">
+                <img src="img/logo 2.png" alt="LOGO DE LA BIBLIOTECA" />
+            </a>
+            
+            <h1>BIBLIOTECA G23</h1>        
+            <nav>  <!--etiqueta para crear menus de naveegacion-->
+                <ul>    <!--para crear una lista no ordenada-->
+                   <li style="background-color:rgb(162, 194, 144)"><a href="https://sigma.ica.gov.co/" target="_blank">SIMGA</a></li> <!--los li son los intens-->
+                   <li style="background-color:rgb(96, 224, 96)"><a href="https://www.ica.gov.co/" target="_parent">ICA</a></li>
+                   <li><a href="mailto:osdimafase@gmail.com" target="_self">Correo</a></li>
+
+                </ul>
+            </nav>
+        </center>       
+    </header>
+
+
+
+    <!--dentro del main crearemos un formulario-->
+    <main style="background-color:rgb(223, 245, 220)"> <!--agregamos un atributo de color a la etiqueta main, podemos agramar mas atributos si deseamos-->
+         <br /><br />
+         <center>
+            <h1>titulo del formulario cambios</h1>
+            <form id="formulariog23">  <!--damos nombre al formulario-->
+                <label for="nombres">Ingresar nombres</label>
+                <input type="text" placeholder="Ingresar nombre" id="nombres" size="60" required />
+                <br /><br />  <!--para dar saltos de linea-->
+
+                <label for="numero_documento">Ingresar numero de cocumento</label>
+                <input type="number" placeholder="Ingresar numero" id="numero_documento" size="60" required />
+                <br /><br />
+
+                <label for="fecha">Ingresar la fecha</label>
+                <input type="date" placeholder="Ingresar fecha" id="fecha" size="60" required="true" />
+                <br /><br />
+
+                <input type="submit" id="boton" value="Guardar"/>
+                <br /><br />
+
+                <label>Ingresar clave</label>
+                <input type="password" id="clave" />
+                <br /><br />
+
+                <select name="" id="tipo_documento">   <!--campos de seleccion-->
+                    <option value="CC" selected>Cedula de ciudadania</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cedula de extrangeria</option>
+                </select> 
+                <br /><br />
+
+                <label for="Ingresar observaciones"></label>
+                <textarea name="" id="observaciones" cols="50" rows="3" minlength="10" placeholder="Ingresar observaciones"></textarea>  <!--campo para hacer obsevaciones-->
+                <br /><br />
+
+                <label for="genero">Ingresar genero:</label>   <!--para seleccionar una opcion-->
+                <label>Masculino</label><input type="radio" name="genero" />
+                <label>Femenino</label><input type="radio" name="genero" />
+                <br /><br />
+
+                <label for="materias">Seleccionar materias:</label>   <!--para seleccionar varias opciones-->
+                <label>Quimica</label><input type="checkbox" name="materias" />
+                <label>Bilogia</label><input type="checkbox" name="materias" />
+                <label>Matematicas</label><input type="checkbox" name="materias" />
+                <label>Ingles</label><input type="checkbox" name="materias" />
+                <br /><br />
+
+                <input type="submit" id="boton" value="Guardar"/>
+   
+             </form>
+         </center>
+         <h1>Ejemplo tabla</h1>
+         <table align="center" bgcolor="#C0C0C0" border="1" width="50%"> <!--Creacion de una tabla con 6 columnas-->
+            <tr>
+                <th></th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+
+
+            </tr>
+            <tr>
+                <td>8-10</td>
+                <td>Quimica</td>
+                <td>Fisica</td>
+                <td>Matematicas</td>
+                <td>Ingles</td>
+                <td>biologia</td>
+
+
+            </tr>
+         </table>
+
+         
+         
+
+         
+    </main>
+
+    <!--dentro del footer ira la información del proyecto, grupo, redes sociales-->
+    <footer>    
+            <h1>texto footer</h1>
+            <p>aqui va un parrafo de pruba</p>          
+    </footer>
+    
+    
 </body>
 </html>
