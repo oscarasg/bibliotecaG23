@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">  <!--esta linea de codigo la copiamos del punto 2 de la pagina de bootstrap para poder importar los estilos que nos ofrece botstrap-->
+    <link href="css/estilo_bootstrap.css" rel="stylesheet" > <!--colocamos esta linea de codigo para poder importar y trabajar el archivo de estilo_bootstrap que creamos-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <!--las siguiente dos lineas de codigo se copiant de la pagina http://fonts.google.com, donde se escoge unos tipos de letras gratuitos para incorporar a nuestra pagina-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet" />
+
+   
+</head>
+<body>
+    
+    <header class="container">
+        <div class="row"> <!--cuando necesitamos crear muchas cajas seguidas dentro de un container utilizmos el row y dentro de este iran nuestras cajas-->
+            <div class="caja1 col-12 col-md-6"> <!--agregamos col-12 col-xxl-4 para que cuando la pantalla sea grande esta caja ocupe el 100% de la caja container y cando se a pequeño solo ocupe el 50% de la caja container-->
+                <a href="https://sigma.ica.gov.co/">
+                    <img src="img/logo 2.png" alt="LOGO DE LA BIBLIOTECA" />
+                </a>
+
+            </div>
+
+            <div class="caja2 col-12 col-md-6">
+                <h1>BIBLIOTECA G23</h1>
+
+            </div>
+
+            <div class="caja3 col-12 col-md-12">  <!--en este caso no imponta si la pantalla sea pequeña o grande igual la caja ocupara el 100 % del tamaño de la caja container-->
+                <nav class="navbar navbar-dark bg-primary">  <!--etiqueta para crear menus de naveegacion  navbar navbar-dark bg-primary esta parte de codigo la copio de la pagina https://getbootstrap.com/docs/5.2/components/navbar/-->
+                    <ul>    <!--para crear una lista no ordenada-->
+                       <li> <a href="https://sigma.ica.gov.co/" target="_blank">SIGMA</a></li> <!--los li son los intens-->
+                       <li> <a href="https://www.ica.gov.co/" target="_parent">ICA</a></li>
+                       <li><a href="mailto:osdimafase@gmail.com" target="_self">Correo</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+       
+
+    </header>  <!--el header tambien es una caja-->
+
+    <br /><br />
+
+
+
+        <main class="container">
+            <div class="row">
+            <br /><br />
+            
+            <div class="formulario1 col-0 col col-md-2"></div>
+            <form class="col-12 col col-md-8" onsubmit="return false">  <!--damos nombre al formulario,    agregamos onsubmit="return" para que no me recargue la pagina-->
+                <h1 style="text-align:center">CALCULADORA</h1>
+                <label class="form-label" for="nombres">Numero 1</label>
+                <input class="form-control" type="number"  id="numero1" />
+                <p id="parrafo_validar1"></p> <!--creamos un parrafo para ingresar datos desde javascript-->
+
+                <label class="form-label" for="numero_documento">Numero 2</label>
+                <input class="form-control" type="number" id="numero2" />
+                <p id="parrafo_validar2"></p>
+                <br /><br />
+
+               
+               
+                <br /><br />
+
+                <input  class="botones-formulario btn btn-success" type="submit" id="boton" onclick="realizar_operaciones_matematicas()" value="Calcular"/> <!--para crear botones   agregamos  class="btn btn-success" el cual copiamos de la pagina http://127.0.0.1:5500/ejercicio_bootstrap.html para cambiarl el estilo del boton por un estilo bootstrap   agregamos onclick para darle una accion al boton-->
+                <input  class="botones-formulario btn btn-success" type="submit" id="boton" value="Cancelar"/>
+    
+                </form>
+
+                <!--crear una caja en este punto desde javascrip-->
+
+
+                <!--crear una etiqueta desde java scrip-->
+                <div id="caja-uno">
+                    <h3>titulo 3</h3>
+
+                </div>
+                
+            </div>     
+    </main>
+
+    <br /><br />       <br /><br />        
+
+
+<script src="javascript/calculadora.js"></script> <!--para implementar es este archivo html lo que hagamos en el archivo javascript, esta linea de codigo tambien la podemos colocar el final antes del body-->
+
+<br /><br /> 
+
+</body>
+</html>

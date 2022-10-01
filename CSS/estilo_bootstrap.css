@@ -1,0 +1,78 @@
+.text-primary{
+    color: blueviolet !important; /*para cambiar el color de texo del parrafo tex-primary agregamos la palabra !important para indicarle que le de prioridad a este cambio en caso de que no quiera tomarnor el cambio de color*/
+    
+}  
+
+
+
+.caja1{
+    background-color: white; /*inicialmente tendra otro color */
+    height: 140px;
+    position: relative;
+}
+
+.caja1 img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.caja2{
+    background-color: white;  /*inicialmente tendra otro color */
+    height: 140px;
+    font-family: 'Montserrat Alternates', sans-serif; /*damos tipo de letra a todo lo que esta dentro del body*/
+    position: relative;
+}
+
+.caja2 h1{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+}
+
+.caja3{
+    background-color: white;   /*inicialmente tendra otro color */
+    height: 60px;
+}
+
+ul li{ /*dentro de estas llaves se les da atributos o caracteristicas a los elementos del menu*/
+    display: inline-block; /* para cambiar de posision vertical a posicion horizontal los elementos de la lista que hacer pante del menu*/
+    
+}
+
+ul li{
+    width: 200px;  /*para dar tamaño de espacio que ocupara cada palabra del menu */
+    
+}
+
+ul li a{
+    color: white;    /*dar color a las palabras del menu */
+    text-decoration: none;  /*para quitar la raya que aparece debajo de cada palabra del menu */
+}
+
+ul li a:hover{
+    color: aqua; /*para dar color a las letra de menu cuando pase el cursor sobre ellas */
+}
+
+.botones-formulario{  /*damos tamaño a los botones */
+    width: 49%;
+}
+
+.estilo1{    /*estilo creado a un parrafo en el javascrint */
+    text-align: center;
+    color: blue;
+}
+
+
+@media screen and (max-width: 640px) {  /*para cuando la pantalla se a pequeña el texto del titulo ce centre */
+    .caja2 h1{
+        left: 50%;
+        
+    }
+    
+}

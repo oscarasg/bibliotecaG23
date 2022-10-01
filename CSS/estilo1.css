@@ -1,0 +1,231 @@
+/*esta es la forma de crear comentarios en CSS, hay tres formas de agragar o modificar estilos
+o atributos a una etiqueta, se puede hacer en la misma etiqueta, en el head o creando una hoja
+para los estilos como esta hoja llamada estilo1.css, se da propiedad a los atributos asignados
+en cada etiqueta, sino se agrego estilo en la etiqueta buscara si se le dio estilo en el head
+y por ultimo buscara si hay una hoja de estilos. lo recomendable es crear y modificar los 
+estilos(color, fuente, ubicacion, tamaño etc en una hoja de estilos asi se trabajara mejor
+y se vera mejor el codigo 
+pagina recomendada para trabajar colores  https://htmlcolorcodes.com/ 
+1 cm = 40px*/
+body{
+    font-family: 'Montserrat Alternates', sans-serif; /*damos tipo de letra a todo lo que esta dentro del body*/
+}
+
+label{
+    width: 200px;   /*asignamos tamaño al label y como al frente del label tenemos un tex aarea entonces tenemos que agregar la lina de cogigo que sigue, para que permita asignar tamaño a los label*/
+    display: inline-block; 
+}
+tabla{
+    width: 90%;
+}
+
+
+.caja-header{   /* en esta caja iran las demas cajas
+    width: 100%;  /*se da tamaño en procentaje para que se adacte al tamaño de los diferentes dispositivos*/
+    height: 200px;
+    background-color: white;  /*al incio cuando se crea la caja se debe dar un color diferente al balnco para poder diferenciar las cajas al moemnto de hacer el diseño*/
+    
+
+}
+
+#caja-logo{    /*caja para el logo la cual ira dentro de la caja-header en la parte superior*/
+    width: 39%;    /*50 % de la caja principal caja-header*/
+    height: 150px;
+    background-color: white;   /*al incio cuando se crea la caja se debe dar un color diferente al balnco para poder diferenciar las cajas al moemnto de hacer el diseño*/
+    float: left;
+    position: relative;  /*para centrar la imagen dentro de la caja*/
+}
+
+#caja-logo img{        /*para centrar la imagen dentro de la caja logo*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#caja-logo img{
+    position: absolute;
+    left: 50%;
+}
+
+#caja-titulo{  /*caja para el titulo la cual ira dentro de la caja-header en la parte superior*/
+    width: 61%;
+    height: 150px;
+    background-color: white;  /*al incio cuando se crea la caja se debe dar un color diferente al balnco para poder diferenciar las cajas al moemnto de hacer el diseño*/
+    float: left;
+    text-align: left; /*para alinear el texto en el centro de la caja teniendo encuenta sus lados*/
+}
+
+#caja-titulo h1{  
+    line-height: 110px; /*Para centrar el texto al centro de la caja teniendo en cuenta su altura*/
+}
+
+#caja-menu{     /*caja para el menu la cual ira dentro de la caja-header en la parte superior*/
+    width: 50%;
+    height: 50px;
+    background-color: white; /*al incio cuando se crea la caja se debe dar un color diferente al balnco para poder diferenciar las cajas al moemnto de hacer el diseño*/
+    float: left;
+    margin-left: 25%;
+    margin-right: 25%;    
+}
+
+ul li{ /*dentro de estas llaves se les da atributos o caracteristicas a los elementos del menu*/
+    display: inline-block; /* para cambiar de posision vertical a posicion horizontal los elementos de la lista que hacer pante del menu*/
+    width: 20%;  /*asignar tamaño a cada elemento del menu*/  
+    height: 40px;
+    background-color: rgb(142, 201, 226); /*para agregar color de fondo a los elementos de la lista*/
+    padding-top: 20px; /*Para asigna posision dentro de la caja del menu de cada palabra teniendo encuenta la altura*/
+}
+
+ul li a{
+    color: green; 
+    text-decoration: none;  /*para quitar las lineas que aparecen debajo de las palabras que conformar el munu que indicaban tener un ipervinculo*/ 
+}
+
+ul li a:hover{  /*crear un eventos*/
+    color: crimson; /*cuando pase el cursor por encima de cada palabra del menu esta cambiara de color*/
+    text-decoration: underline; /* cuando pase el cursor por encima de cada palabra agregara una linea en la parte inferior*/
+    
+}
+
+/*Ahora empezamos a mejorar y organizar el diseño del formulario*/
+form{
+    width: 70%;
+    background-color: white;  /*al incio cuando se crea la caja se debe dar un color diferente al balnco para poder diferenciar las cajas al moemnto de hacer el diseño*/
+    text-align: left;
+}
+
+.label1{
+    width: 14%;
+
+}
+
+.input-form{
+    width: 50%;
+}
+
+.boton-formulario{
+    width: 49%;
+    height: 30px;
+    background-color: rgb(111, 145, 145);
+    color: whitesmoke;
+    border: none; /*para que los botones me queden sin bordes*/
+}
+
+.boton-formulario:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
+.tabla{ /*crear estilos a la tabla*/
+    width: 70%;
+    background-color: white ;
+    border: 1px solid #000;
+
+}
+
+th{
+    background-color: gainsboro;
+    border: none;
+}
+
+td{
+    border: none;
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(157, 74, 74);
+}
+
+.caja1{
+    width: 33%;
+    height: 300px;
+    background-color: blueviolet;
+    float: left;
+    text-align: center; /*para alinear el texto en el centro de la caja */
+}
+
+.caja2{
+    width: 34%;
+    height: 300px;
+    background-color: rgb(86, 43, 226);
+    float: left;
+}
+
+.caja3{
+    width: 33%;
+    height: 300px;
+    background-color: rgb(43, 226, 55);
+    float: left;
+}
+
+/*Configuracion para adactar tamaño de pagina a celulares
+al ver nuentra pagina con el diseño que ya teniamos en un celular, nuestro diseño se va a desordenar ya que la pantalla del culular es mas pequeña que la de un pc, es dicir el diseño anterior era para ver la pagina en un pc, ahora debemos hacer un nuevo diseño para ver nuestra pagina en un celular teniendo en cuenta el codigo de estilo que ya habiamos creado en la parte superior, para saber que cambios debemos hacer debemos ubicar nuestra pagina de acuedo al ancho de la pantalla de un celular que es aproximadamente menor a 640 px*/
+@media screen  and (max-width: 640px) {  /*para dispositivos con resolucion o tamaño de pantalla de maximo 640px */
+    #caja-logo{   /*copiamos las parte de codigo que teniamos en la parte superior y empesamos a modificar los valores, las lineas de codigo que no cambien de valor se pueden elimiar ya que estarian determinadas en la parte superior de donde copiamos el codico*/
+        width: 100%;   /*cambiamos de 39% a 100%, es decir que la caja del logo cubrirá todo el ancho de la pantalla*/                     
+    }
+
+    /*si necesito centrar o ubicar el logo a la izquierda o derecha copio el codigo de la parte superior y hago las modificaciones aca */
+
+    #caja-titulo{  /*igual copiamos el codigo de caja titulo y hacemos las modificaciones */
+        width: 100%;
+        height: 100px;             
+        text-align: center; /*modificamos esta linea de codigo para que el titulo se ubique en el centro de la caja y como la caja ocupa el 100% de la pantalla entonces el titulo tambien quedara en el centro de la pantalla */
+    }
+
+    #caja-menu{     /*copiamos todo el diseño de la caja menu incluyendo sus ul que este caso son tres y procedemos a realizar las modificaciones y a eliminar las lineas de codigo que no cambian, al igual no pasa nada si se dejan pero es mejor eliminarlar para dismuniur linear de codigo */   
+        width: 100%;
+        height: 200px;
+        float: left;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-color: blue; 
+          
+    }
+    
+    ul li{ 
+        display: inline-block;  
+        width: 100%;   
+        background-color: rgb(231, 229, 157); 
+        padding-top: 10px;
+        margin-left: -35px;
+        margin-bottom: 8px; /*para dar un espacio vertical entre cada boton */
+        
+    }
+    
+    ul li a{
+        color: green; 
+        text-decoration: none;  
+    }
+    
+    /*ahora modificaremos el formulario */  
+    form{
+        width: 100%;
+        background-color: white;  
+        text-align: left;
+    }
+    
+    .input-form{
+        width: 100%;    
+   }
+
+   .boton-formulario{
+    width: 48%;
+    color: whitesmoke;       
+   }
+
+   .label1{     /*este label 1 modifica la parte de genero y materias */
+    width: 50%;
+   }
+
+   .tabla{ 
+    width: 100%;  /* en este caso asi ajustemos la tabla al 100% no nos mostrara la tabla completa ya que su contenido es muy grande para ajustarla podemos cambiar por ejemplo el tamaño de la letra*/
+    font-size: 12px;
+    }
+
+    /*ahora para cmodificar las cajas con iconos debemos crear un @media screen en el archivo de estilo2 ya que alli fue donde diseñamos estas tres cajas */
+}

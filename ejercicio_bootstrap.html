@@ -1,0 +1,176 @@
+<!--Crearemos un nuevo archivo para otra pagina wed esta ves lo trabajaremos con bootstrap
+para ello podemos seguir los pasos de la siguiente pagina https://getbootstrap.com/docs/5.2/getting-started/introduction/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">  <!--esta linea de codigo la copiamos del punto 2 de la pagina de bootstrap para poder importar los estilos que nos ofrece botstrap-->
+    <link href="css/estilo_bootstrap.css" rel="stylesheet" > <!--colocamos esta linea de codigo para poder importar y trabajar el archivo de estilo_bootstrap que creamos-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <!--las siguiente dos lineas de codigo se copiant de la pagina http://fonts.google.com, donde se escoge unos tipos de letras gratuitos para incorporar a nuestra pagina-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet" />
+
+   
+</head>
+<body>
+    
+    <header class="container" onclick="alert('dio clic sobre header')">  <!--para crear una caja que cuando la pantalla sea pequeña me ocupe el 100% de la pantalla y cuando la pantalla sea grande me ocupe aproximadamente el 80% de la pantalla, teniendo en cuenta la anchura el que mas se utiliza es el container-lg   ya como parte de java script agregamos: onclick="alert('dio clic sobre header') para cuando de clip sobre determinada parte de la pagina se nos muestre un mensaje en una pantalla emergente"-->
+        <div class="row"> <!--cuando necesitamos crear muchas cajas seguidas dentro de un container utilizmos el row y dentro de este iran nuestras cajas-->
+            <div class="caja1 col-12 col-md-6"> <!--agregamos col-12 col-xxl-4 para que cuando la pantalla sea grande esta caja ocupe el 100% de la caja container y cando se a pequeño solo ocupe el 50% de la caja container-->
+                <a href="https://sigma.ica.gov.co/">
+                    <img src="img/logo 2.png" alt="LOGO DE LA BIBLIOTECA" />
+                </a>
+
+            </div>
+
+            <div class="caja2 col-12 col-md-6">
+                <h1>BIBLIOTECA G23</h1>
+
+            </div>
+
+            <div class="caja3 col-12 col-md-12">  <!--en este caso no imponta si la pantalla sea pequeña o grande igual la caja ocupara el 100 % del tamaño de la caja container-->
+                <nav class="navbar navbar-dark bg-primary">  <!--etiqueta para crear menus de naveegacion  navbar navbar-dark bg-primary esta parte de codigo la copio de la pagina https://getbootstrap.com/docs/5.2/components/navbar/-->
+                    <ul>    <!--para crear una lista no ordenada-->
+                       <li> <a href="https://sigma.ica.gov.co/" target="_blank">SIGMA</a></li> <!--los li son los intens-->
+                       <li> <a href="https://www.ica.gov.co/" target="_parent">ICA</a></li>
+                       <li><a href="mailto:osdimafase@gmail.com" target="_self">Correo</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+       
+
+    </header>  <!--el header tambien es una caja-->
+
+    <br /><br />
+
+
+
+        <!--copiamos el formulario del index.html y luego hacemos unos cambios para darle un nuevo diseño por medio del bootstrap-->
+        <main class="container">
+            <div class="row">
+            <br /><br />
+            
+            <div class="formulario1 col-0 col col-md-2"></div>
+            <form class="col-12 col col-md-8">  <!--damos nombre al formulario-->
+                <h1 style="text-align:center">Titulo Formulario</h1>
+                <label class="form-label" for="nombres">Nombre</label>
+                <input class="form-control" type="text" placeholder="Ingresar nombre" id="nombres"  required />
+                <br /><br />  <!--para dar saltos de linea-->
+
+                <label class="form-label" for="numero_documento">No. Identificación</label>
+                <input class="form-control" type="number" placeholder="Ingresar numero" id="numero_documento"  required />
+                <br /><br />
+
+                <label class="form-label" for="fecha">fecha</label>
+                <input class="form-control" type="date" id="fecha" />
+                <br /><br />
+
+                <label class="form-label">Clave</label>
+                <input class="form-control" type="password" id="clave" />
+                <br /><br />
+
+                <label class="form-label" for="Tipo_documento">Tipo de documento</label>
+                <select class="form-select" name="" id="tipo_documento">   <!--campos de seleccion    agregamos class="form-select" el cual copiamos de la pagina https://getbootstrap.com/docs/5.2/forms/select/ para darle estilo bootstrpa al campo de seleccion-->
+                    <option value="CC" selected>Cedula de ciudadania</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cedula de extrangeria</option>
+                </select> 
+                <br /><br />
+
+                <label class="form-label" for="Ingresar observaciones">Observaciones</label>
+                <textarea class="form-control" name="" id="observaciones" cols="50" rows="3" minlength="10" placeholder="Campo observaciones"></textarea>  <!--campo para hacer obsevaciones-->
+                <br /><br />
+
+                <label class="form-label">Genero:</label>   <!--para seleccionar una opcion-->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="genero">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Femenino
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="genero" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Masculino
+                    </label>
+                  </div>
+                <br /><br />
+
+                <label>Materias:</label>   <!--para seleccionar varias opciones-->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Quimica
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Biología
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Matematicas
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Ingles
+                    </label>
+                  </div>
+                <br /><br />
+
+                <input  class="botones-formulario btn btn-success" type="submit" id="boton" value="Guardar"/> <!--para crear botones   agregamos  class="btn btn-success" el cual copiamos de la pagina http://127.0.0.1:5500/ejercicio_bootstrap.html para cambiarl el estilo del boton por un estilo bootstrap-->
+                <input  class="botones-formulario btn btn-success" type="submit" id="boton" value="Cancelar"/>
+    
+                </form>
+                
+            </div>     
+    </main>
+
+    <br /><br />       <br /><br />        <br /><br />
+
+    <table class="table table-striped" align="center" border="1"> <!--Creacion de una tabla con 6 columnas      se agrego class="table table-striped" el cual copiamos de la pagina https://getbootstrap.com/docs/5.2/content/tables/ para darle un estilo bootstrap a la tabla-->
+       <tr>
+           <th></th>
+           <th>Lunes</th>
+           <th>Martes</th>
+           <th>Miercoles</th>
+           <th>Jueves</th>
+           <th>Viernes</th>
+
+
+       </tr>
+       <tr>
+           <td>8-10</td>
+           <td>Quimica</td>
+           <td>Fisica</td>
+           <td>Matematicas</td>
+           <td>Ingles</td>
+           <td>biologia</td>
+
+
+       </tr>
+    </table>
+
+    <br /><br />       <br /><br /> 
+
+    <script>  /* etiqueta de java ecript para mostrar un mensaje a traves de una pantalla emergente, de acuerdo donde lo escribamos se mostrara en la pagina, si lo escribimos al principio, lo mostrara al principio, los scrip es recomendable hacerlos al final de la pagina antes del body */
+      alert("mensaje al final de la pagina");
+    </script>
+
+<script src="javascript/ejercicio1.js"></script> <!--para implementar es este archivo html lo que hagamos en el archivo javascript, esta linea de codigo tambien la podemos colocar el final antes del body-->
+
+<br /><br /> 
+
+</body>
+</html>

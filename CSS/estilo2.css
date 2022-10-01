@@ -1,0 +1,310 @@
+body{ /*creamos este body para darle un formato de texto a toda la pagina */
+    font-family: 'Montserrat Alternates', sans-serif; /*esta linea de codigo la copiamos de la pagina http://fonts.google.com para dar un formato de texto, en este caso para toda la pagina */
+}
+
+
+#caja-principal{ /*cuando en el html se le asigna un id a la caja, aca en css se trbaja con # */
+    width: 100%;  /*la caja principal donde iran las otras cajas cubrira toda la pantalla */
+    height: 230px; /*esta caja tendra una altura  de aprosimadamente 6 cm */
+    background-color: white;
+}
+
+.caja-publicidad1{  /*las cajas nombradas con class en el html, aca las trabajaremos con . */
+    width: 32%;    /* tendra un ancho del 33% con respecto a la caja principal */
+    height: 230px;
+    background-color: white;
+    float: left; /*para poder ubicar una caja al frente de otra u otras */
+    margin-right: 4px; /* para dar un espacio en la parte derecha entre una caja y otra */
+    border-width: thin; /*creamos un border a la caja de 10px de grosor */
+    border-style: solid;  /*tipo de borde solido */
+    border-color: black; /*damos color negro al borde de la caja */
+}
+
+.caja-superior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 60px;
+    background-color: white;
+    float: left;
+}
+
+.caja-subtitulo{
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    float: left;
+    position: relative;
+    
+}
+
+.caja-subtitulo h3{ /*para mover el texo un poco a la derecha */
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+
+.caja-logo{
+    width: 20%;
+    height: 60px;
+    background-color: white;
+    float: left;
+    position: relative; /*para centrar la imagen o icono con el siguiente segmento de codigo */
+    color: rgba(218, 38, 131, 0.734); /*para darle color al icono que importamos de internet */
+}
+
+.caja-logo span{ /*dentro de estas llaves se escribe las lineas de codigo para completar la accion de centrar la imagen o icono */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.caja-media{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 130px;
+    background-color: white;
+    float: left;
+}
+
+.caja-izquierda{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+} 
+
+.caja-derecha{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+}    
+
+.caja-inferior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 40px;
+    background-color: white;
+    float: left;
+    position: relative; /*linea de codigo para centrar el boton1 */
+}
+
+.boton1{
+    width: 30%;
+    height: 30px;
+    background-color: crimson;
+    color: white;
+    border: none; /*para quitar el borde que por defaut tiene el boton */
+    
+}
+
+.caja-inferior .boton1{
+    position: absolute;
+    left: 85%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+}
+
+
+.caja-publicidad2{
+    width: 33%;
+    height: 230px;
+    background-color: blueviolet;
+    float: left;
+    margin-right: 4px;
+    border-width: thin; 
+    border-style: solid;  
+    border-color: black;
+}
+
+.caja-superior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 60px;
+    background-color: white;
+    float: left;
+}
+
+.caja-subtitulo{
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    float: left;
+
+}
+
+.caja-logo{
+    width: 20%;
+    height: 60px;
+    background-color: white;
+    float: left;
+    position: relative; /*para centrar la imagen o icono con el siguiente segmento de codigo */
+    color: rgba(218, 38, 131, 0.734); /*para darle color al icono que importamos de internet */
+}
+
+.caja-logo span{ /*dentro de estas llaves se escribe las lineas de codigo para completar la accion de centrar la imagen o icono */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.caja-media{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 130px;
+    background-color: white;
+    float: left;
+}
+
+.caja-izquierda{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+} 
+
+.caja-derecha{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+}    
+
+.caja-inferior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 40px;
+    background-color: white;
+    float: left;
+    position: relative; /*linea de codigo para centrar el boton1 */
+}
+
+.boton1{
+    width: 30%;
+    height: 30px;
+    background-color: crimson;
+    color: white;
+    border: none; /*para quitar el borde que por defaut tiene el boton */
+    
+}
+
+.caja-inferior .boton1{
+    position: absolute;
+    left: 85%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+}
+
+
+
+.caja-publicidad3{
+    width: 33%;
+    height: 230px;
+    background-color: brown;
+    float: left;
+    border-width: thin; 
+    border-style: solid;  
+    border-color: black;
+}
+
+.caja-superior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 60px;
+    background-color: white;
+    float: left;
+}
+
+.caja-subtitulo{
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    float: left;
+
+}
+
+.caja-logo{
+    width: 20%;
+    height: 60px;
+    background-color: white;
+    float: left;
+    position: relative; /*para centrar la imagen o icono con el siguiente segmento de codigo */
+    color: rgba(218, 38, 131, 0.734); /*para darle color al icono que importamos de internet */
+}
+
+.caja-logo span{ /*dentro de estas llaves se escribe las lineas de codigo para completar la accion de centrar la imagen o icono */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.caja-media{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 130px;
+    background-color: white;
+    float: left;
+}
+
+.caja-izquierda{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+} 
+
+.caja-derecha{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    float: left;
+}    
+
+.caja-inferior{
+    width: 100%;  /*asigna el 100% de ancho con referencia a la caja publicidad 1 */
+    height: 40px;
+    background-color: white;
+    float: left;
+    position: relative; /*linea de codigo para centrar el boton1 */
+}
+
+.boton1{
+    width: 30%;
+    height: 30px;
+    background-color: crimson;
+    color: white;
+    border: none; /*para quitar el borde que por defaut tiene el boton */
+    
+}
+
+.caja-inferior .boton1{
+    position: absolute;
+    left: 85%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+}
+
+
+@media screen and (max-width: 640px) {  /*modificaremos en diseño de las tres caja de publicidad para visualizar en un movil */
+    #caja-principal{ 
+        width: 100%;  
+        height: 700px;         
+    }
+
+    .caja-publicidad1, .caja-publicidad2, .caja-publicidad3{  /*si todas las cajas van a tener el mismo cambio o diseño la podemos establecer en una misma linea de codigo separandolas por una coma */
+        width: 100%; 
+        margin-bottom: 8px; /*para separar las cajas */
+          
+    }   
+    
+}
+
+

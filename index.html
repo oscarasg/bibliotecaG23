@@ -4,84 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Titulo de la pagina wed</title>
+    <link rel="stylesheet" href="css/estilo1.css"> <!--para importar la hoja estilo y poderlo aplicar en la pagina todos los cambios que realicemos en esta hoja-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />    <!--las siguiente dos lineas de codigo se copiant de la pagina http://fonts.google.com, donde se escoge unos tipos de letras gratuitos para incorporar a nuestra pagina-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> <!--este link lo copiamos de la misma pagina anterior esta vez para importar iconos de la parte static icon font-->
+    <link rel="stylesheet" href="css/estilo2.css" /> <!--para incorporar la hoja de estilo que creamos para el ejercicio 2-->
+    <script src="https://kit.fontawesome.com/4ca3b5b132.js" crossorigin="anonymous"></script> <!--para poder utilizar los iconos de la pagina fontawosemo.com-->
+
 </head>
-<body>
+
+
+
+<body >
     <!--dnetro del header se va a colocar el logo, titulo y menu de navegación-->
-    <header style="background-color:rgb(104, 204, 204)">
-        <center>
+    <div class="caja-header">   <!--crear una caja con propiedades para muchos-->
+
+        <div id="caja-logo">  <!--crear una caja con un identificador para agregar propiedades a uno en especial-->
             <a href="https://sigma.ica.gov.co/">
                 <img src="img/logo 2.png" alt="LOGO DE LA BIBLIOTECA" />
             </a>
-            
-            <h1>BIBLIOTECA G23</h1>        
+        </div>
+
+        <div id="caja-titulo">
+            <h1>BIBLIOTECA G23</h1>
+        </div>
+
+        <center>
+        <div id="caja-menu">
             <nav>  <!--etiqueta para crear menus de naveegacion-->
                 <ul>    <!--para crear una lista no ordenada-->
-                   <li style="background-color:rgb(162, 194, 144)"><a href="https://sigma.ica.gov.co/" target="_blank">SIMGA</a></li> <!--los li son los intens-->
-                   <li style="background-color:rgb(96, 224, 96)"><a href="https://www.ica.gov.co/" target="_parent">ICA</a></li>
+                   <li> <a href="https://sigma.ica.gov.co/" target="_blank">SIGMA</a></li> <!--los li son los intens-->
+                   <li> <a href="https://www.ica.gov.co/" target="_parent">ICA</a></li>
                    <li><a href="mailto:osdimafase@gmail.com" target="_self">Correo</a></li>
-
                 </ul>
             </nav>
-        </center>       
-    </header>
+        </div>
+        </center>        
+    </div>
+    <br /><br /><br /><br /> <!--4 enter para dar enpacio entre el encabezado y el formulario-->
+
+    
 
 
 
     <!--dentro del main crearemos un formulario-->
-    <main style="background-color:rgb(223, 245, 220)"> <!--agregamos un atributo de color a la etiqueta main, podemos agramar mas atributos si deseamos-->
+    <main >
          <br /><br />
          <center>
-            <h1>titulo del formulario cambios</h1>
+            <h1>Titulo Formulario</h1>
             <form id="formulariog23">  <!--damos nombre al formulario-->
-                <label for="nombres">Ingresar nombres</label>
-                <input type="text" placeholder="Ingresar nombre" id="nombres" size="60" required />
+                <label for="nombres">Nombre</label>
+                <input class="input-form" type="text" placeholder="Ingresar nombre" id="nombres"  required />
                 <br /><br />  <!--para dar saltos de linea-->
 
-                <label for="numero_documento">Ingresar numero de cocumento</label>
-                <input type="number" placeholder="Ingresar numero" id="numero_documento" size="60" required />
+                <label for="numero_documento">No. Identificación</label>
+                <input class="input-form" type="number" placeholder="Ingresar numero" id="numero_documento"  required />
                 <br /><br />
 
-                <label for="fecha">Ingresar la fecha</label>
-                <input type="date" placeholder="Ingresar fecha" id="fecha" size="60" required="true" />
+                <label for="fecha">fecha</label>
+                <input class="input-form" type="date" id="fecha" />
                 <br /><br />
 
-                <input type="submit" id="boton" value="Guardar"/>
+                <label>Clave</label>
+                <input class="input-form" type="password" id="clave" />
                 <br /><br />
 
-                <label>Ingresar clave</label>
-                <input type="password" id="clave" />
-                <br /><br />
-
-                <select name="" id="tipo_documento">   <!--campos de seleccion-->
+                <label for="Tipo_documento">Tipo de documento</label>
+                <select class="input-form" name="" id="tipo_documento">   <!--campos de seleccion-->
                     <option value="CC" selected>Cedula de ciudadania</option>
                     <option value="TI">Tarjeta de identidad</option>
                     <option value="CE">Cedula de extrangeria</option>
                 </select> 
                 <br /><br />
 
-                <label for="Ingresar observaciones"></label>
-                <textarea name="" id="observaciones" cols="50" rows="3" minlength="10" placeholder="Ingresar observaciones"></textarea>  <!--campo para hacer obsevaciones-->
+                <label for="Ingresar observaciones">Observaciones</label>
+                <textarea class="input-form" name="" id="observaciones" cols="50" rows="3" minlength="10" placeholder="Campo observaciones"></textarea>  <!--campo para hacer obsevaciones-->
                 <br /><br />
 
-                <label for="genero">Ingresar genero:</label>   <!--para seleccionar una opcion-->
-                <label>Masculino</label><input type="radio" name="genero" />
-                <label>Femenino</label><input type="radio" name="genero" />
+                <label for="genero">Genero:</label>   <!--para seleccionar una opcion-->
+                <label class="label1">Femenino</label><input type="radio" name="genero" />
+                <label class="label1">Masculino</label><input type="radio" name="genero" />
                 <br /><br />
 
-                <label for="materias">Seleccionar materias:</label>   <!--para seleccionar varias opciones-->
-                <label>Quimica</label><input type="checkbox" name="materias" />
-                <label>Bilogia</label><input type="checkbox" name="materias" />
-                <label>Matematicas</label><input type="checkbox" name="materias" />
-                <label>Ingles</label><input type="checkbox" name="materias" />
+                <label for="materias">Materias:</label>   <!--para seleccionar varias opciones-->
+                <label class="label1">Quimica</label><input type="checkbox" name="materias" />
+                <label class="label1">Bilogia</label><input type="checkbox" name="materias" />
+                <label class="label1">Matematicas</label><input type="checkbox" name="materias" />
+                <label class="label1">Ingles</label><input type="checkbox" name="materias" />
                 <br /><br />
 
-                <input type="submit" id="boton" value="Guardar"/>
+                <input class="boton-formulario" type="submit" id="boton" value="Guardar"/> <!--para crear botones-->
+                <input class="boton-formulario" type="submit" id="boton" value="Cancelar"/>
    
              </form>
+
          </center>
          <h1>Ejemplo tabla</h1>
-         <table align="center" bgcolor="#C0C0C0" border="1" width="50%"> <!--Creacion de una tabla con 6 columnas-->
+         <table class="tabla" align="center" border="1"> <!--Creacion de una tabla con 6 columnas-->
             <tr>
                 <th></th>
                 <th>Lunes</th>
@@ -110,10 +130,145 @@
          
     </main>
 
+    <br /><br /><br /><br />
+    <!--Hacer 3 cajas iguales con div, las cajas deben contener informacion diferente-->
+    <div id="caja-principal">
+        <div class="caja-publicidad1"> <!--dentro de la caja-publicidad1 crearemos 5 cajas-->
+            <div class="caja-superior">
+                <div class="caja-subtitulo">
+                    <h3>Attractions</h3>
+
+                </div>
+                <div class="caja-logo">
+                    <span class="material-symbols-outlined">
+                        transgender
+                        </span>
+
+                </div>
+
+            </div>
+
+            <div class="caja-media">
+                <div class="caja-izquierda" >
+                    <p>Art Galleries</p>
+                    <p>Spas</p>
+                    <p>Shopping</p>
+
+                </div>
+                <div class="caja-derecha" >
+                    <p>Dinning</p>
+                    <p>Beer</p>
+                    <p>Weddings</p>
+
+                </div>
+
+            </div>
+            <div class="caja-inferior">
+                <button class="boton1">More to see</button> <!--creamos un boton, el cual tendra el texto More to see y como este boton tambien ira en las otras cajas entonces no lo creamos con id sino con class-->
+
+            </div>
+
+        </div>
+       
+        <div class="caja-publicidad2">
+            <div class="caja-superior">
+                <div class="caja-subtitulo">
+                    <h3>Lodging</h3>
+
+                </div>
+                <div class="caja-logo">
+                    <span class="material-symbols-outlined">
+                        location_away
+                        </span>
+
+                </div>
+
+            </div>
+
+            <div class="caja-media">
+                <div class="caja-izquierda" >
+                    <p>Bed & Breakfast</p>
+                    <p>Hotel & Motels</p>
+                    <p>Resorts</p>
+
+                </div>
+                <div class="caja-derecha" >
+                    <p>Guest Ranches</p>
+                    <p>Pet Friendly</p>
+                    <p>Parks & Rentals</p>
+
+                </div>
+
+            </div>
+            <div class="caja-inferior">
+                <button class="boton1">More to see</button> <!--creamos un boton, el cual tendra el texto More to see y como este boton tambien ira en las otras cajas entonces no lo creamos con id sino con class-->
+
+            </div>
+            
+            
+
+        </div>
+       
+        <div class="caja-publicidad3">
+            <div class="caja-superior">
+                <div class="caja-subtitulo">
+                    <h3>Recreation</h3>
+
+                </div>
+                <div class="caja-logo">
+                    <span class="material-symbols-outlined">
+                        directions_bike
+                        </span>
+
+                </div>
+
+            </div>
+
+            <div class="caja-media">
+                <div class="caja-izquierda" >
+                    <p>Camping</p>
+                    <p>Fishing</p>
+                    <p>Hiking</p>
+
+                </div>
+                <div class="caja-derecha" >
+                    <p>Cycling</p>
+                    <p>Golf</p>
+                    <p>Ski Resorts</p>
+
+                </div>
+
+            </div>
+            <div class="caja-inferior">
+                <button class="boton1">More to see</button> <!--creamos un boton, el cual tendra el texto More to see y como este boton tambien ira en las otras cajas entonces no lo creamos con id sino con class-->
+
+            </div>
+            
+            
+
+        </div> 
+
+    </div>
+
+
     <!--dentro del footer ira la información del proyecto, grupo, redes sociales-->
-    <footer>    
-            <h1>texto footer</h1>
-            <p>aqui va un parrafo de pruba</p>          
+    <footer>
+        <div class="caja1">
+            <h3>INTEGRANTES</h3>
+            <P>Oscar Angel Garavito Salazar</P>
+            <P>Blanca Cecilia Carrero Moreno</P>
+            <P>James Jadir Garavito Carrero</P>
+            <P>Dania Gissell Garavito Carrero</P>
+        </div>
+
+        <div class="caja2">
+            <h3>REDES SOCIALES</h3>
+            <i class="fa-brands fa-facebook"></i>  <!--linea de codigo para importar el icono de facebook desde la pagina fontawesome.com -->
+            <i class="fa-solid fa-at"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>   
+
+        <div class="caja3"></div>            
     </footer>
     
     
